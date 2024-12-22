@@ -1,5 +1,5 @@
 {
-  "name": "webapp",
+  "name": "@scorpeex/webapp",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,6 +11,10 @@
     "prettify": "prettier --log-level log --cache --write {src/**/*,*}.{ts,tsx,js,json,yml,scss}"
   },
   "dependencies": {
+    "@scorpeex/backend": "workspace:*",
+    "@tanstack/react-query": "4.32.6",
+    "@trpc/client": "10.37.1",
+    "@trpc/react-query": "10.37.1",
     "react": "18.2.0",
     "react-dom": "^18.2.0"
   },
