@@ -1,6 +1,4 @@
-import express from 'express'
-import * as trpcExpress from '@trpc/server/adapters/express'
-import { trpcRouter } from './trpc'
+import { initTRPC } from "@trpc/server";
 
 const ideas = [
     { nick: 'cool-idea-nick-1', name: 'Idea 1', description: 'Description of idea 1...' },
@@ -10,17 +8,10 @@ const ideas = [
     { nick: 'cool-idea-nick-5', name: 'Idea 5', description: 'Description of idea 5...' },
   ]
 
-const expressApp = express()
-expressApp.get('/ping',(req,res)=>{
-    res.send('pong')
-})
-expressApp.use(
-    '/trpc',
-    trpcExpress.createExpressMiddleware({
-    router: trpcRouter,
-}))
-expressApp.listen(3000,()=>{
-    console.info('Listening at http://localhost:3000')
-})
+const trpc = initTRPC.create()
 
-export type TrpcRouter = typeof trpcRouter
+export const trpcRouter = trpc.router({
+    getIdeas: trpc.procedure.query(()=>{
+        return {ideas}
+    }),
+})
