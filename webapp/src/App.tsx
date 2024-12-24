@@ -1,10 +1,10 @@
-import { TrpcProvider } from "./lib/trpc"
-import { AllIdeasPage } from "./pages/AllIdeaPage"
+import { TrpcProvider } from './lib/trpc'
+import { AllIdeasPage } from './pages/AllIdeaPage'
 
-export const App = () =>{
+export const App = () => {
   return (
     <TrpcProvider>
-      <AllIdeasPage/>
+      <AllIdeasPage />
     </TrpcProvider>
   )
 }
