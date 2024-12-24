@@ -6,6 +6,7 @@
     "prettify": "prettier --log-level log --cache --write {src/**/*,*}.{ts,tsx,js,json,yml,scss}",
     "dev": "ts-node-dev --rs ./src/index.ts",
     "build": "rimraf ./dist && tsc --build ./tsconfig.json",
+    "types": "tsc --noEmit --project ./tsconfig.json",
     "start": "node ./dist/index.js"
   },
   "dependencies": {
