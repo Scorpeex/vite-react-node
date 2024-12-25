@@ -8,7 +8,8 @@ const ideas = [
   { nick: 'cool-idea-nick-5', name: 'Idea 5', description: 'Description of idea 5...' },
 ]
 
-const x : number = 'x1'
+const x : number = 'x2'
+if (Math.random()) console.info(x)
 const trpc = initTRPC.create()
 
 export const trpcRouter = trpc.router({
