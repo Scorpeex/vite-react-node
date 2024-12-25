@@ -7,7 +7,7 @@
     "dev": "ts-node-dev --rs ./src/index.ts",
     "build": "rimraf ./dist && tsc --build ./tsconfig.json",
     "types": "tsc --noEmit --project ./tsconfig.json",
-    "lint":"eslint --cache --cache-location ./node_modules/.cache/.eslintcache --ext .ts .",
+    "lint": "eslint --cache --cache-location ./node_modules/.cache/.eslintcache --ext .ts . --fix",
     "start": "node ./dist/index.js"
   },
   "dependencies": {
@@ -20,6 +20,6 @@
   "devDependencies": {
     "@types/cors": "2.8.13",
     "@types/express": "4.17.17",
-    "@types/node": "20.5.0"   
+    "@types/node": "20.5.0"
   }
 }
