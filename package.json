@@ -8,7 +8,8 @@
     "types": "concurrently \"pnpm b types\" \"pnpm w types\"",
     "lint": "concurrently \"pnpm b lint\" \"pnpm w lint\"",
     "prettify": "pnpm -r --parallel prettify",
-    "prepare": "husky"
+    "prepare": "husky",
+    "gitpa": "git add -A && git commit -m \"push all\" && git push"
   },
   "devDependencies": {
     "concurrently": "8.2.0",
