@@ -9,7 +9,7 @@
     "lint": "concurrently \"pnpm b lint\" \"pnpm w lint\"",
     "prettify": "pnpm -r --parallel prettify",
     "prepare": "husky",
-    "gitpa": "git add -A && git commit -m \"push all\" && git push"
+    "gitpa": "git add -A && git commit && git push"
   },
   "devDependencies": {
     "concurrently": "8.2.0",
