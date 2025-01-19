@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint --cache --cache-location ./node_modules/.cache/.eslintcache . --fix",
+    "lint": "eslint --cache --cache-location ./node_modules/.cache/.eslintcache --fix",
     "preview": "vite preview",
     "types": "tsc --noEmit --project ./tsconfig.json && tsc --noEmit --project ./tsconfig.node.json",
     "prettify": "prettier --log-level log --cache --write {src/**/*,*}.{ts,tsx,js,json,yml,scss}"
@@ -16,6 +16,8 @@
     "@tanstack/react-query": "4.32.6",
     "@trpc/client": "10.37.1",
     "@trpc/react-query": "10.37.1",
+    "eslint": "8.47.0",
+    "eslint-config-prettier": "9.0.0",
     "react": "18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "6.15.0"
