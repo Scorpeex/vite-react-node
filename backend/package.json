@@ -10,8 +10,7 @@
     "lint": "eslint --cache --cache-location ./node_modules/.cache/.eslintcache --ext .ts --fix",
     "start": "node ./dist/index.js",
     "pmd": "prisma migrate dev",
-    "pgc": "prisma generate",
-    "prepare": "pnpm pgc"
+    "pgc": "prisma generate"
   },
   "prisma": {
     "schema": "./src/prisma/schema.prisma"
