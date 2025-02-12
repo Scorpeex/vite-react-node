@@ -1,12 +1,15 @@
 extends:
   - standard-with-typescript
   - prettier
+  - plugin:jest/recommended
 ignorePatterns:
   - node_modules
   - dist
 plugins:
   - node
+  - jest
 rules:
+  no-new: off
   import/order:
     - error
     - alphabetize:
@@ -24,7 +27,6 @@ rules:
   '@typescript-eslint/ban-types': off
   '@typescript-eslint/consistent-type-assertions': off
   jsx-a11y/anchor-is-valid: off
-  node/no-process-env: error
   curly:
     - error
     - all
@@ -32,6 +34,11 @@ rules:
     - error
     - skipTemplates: true
       skipStrings: true
+  node/no-process-env: error
+  no-restricted-syntax:
+    - error
+    - selector: '[object.type=MetaProperty][property.name=env]'
+      message: Use instead import { env } from "lib/env"
   no-console:
     - error
     - allow:
