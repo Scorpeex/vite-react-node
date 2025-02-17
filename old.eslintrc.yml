@@ -4,12 +4,9 @@ extends:
 ignorePatterns:
   - node_modules
   - dist
-  - '*.config.js'
 plugins:
   - node
-  - jest
 rules:
-  no-new: off
   import/order:
     - error
     - alphabetize:
@@ -27,6 +24,7 @@ rules:
   '@typescript-eslint/ban-types': off
   '@typescript-eslint/consistent-type-assertions': off
   jsx-a11y/anchor-is-valid: off
+  node/no-process-env: error
   curly:
     - error
     - all
@@ -34,8 +32,9 @@ rules:
     - error
     - skipTemplates: true
       skipStrings: true
-  node/no-process-env: error
-  no-restricted-syntax:
+  no-console:
     - error
-    - selector: '[object.type=MetaProperty][property.name=env]'
-      message: Use instead import { env } from "lib/env"
+    - allow:
+        - info
+        - error
+        - warn

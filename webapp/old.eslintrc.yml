@@ -7,7 +7,6 @@ ignorePatterns:
   - '*.config.js'
 plugins:
   - node
-  - jest
 rules:
   no-new: off
   import/order:

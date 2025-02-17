@@ -4,6 +4,10 @@
     "transpileOnly": true
   },
   "compilerOptions": {
+    "plugins": [{ "transform": "typescript-transform-paths" }],
+    "paths": {
+      "@scorpeex/webapp/*": ["../webapp/*"]
+    },
     "outDir": "./dist",
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
@@ -15,6 +19,7 @@
     "skipLibCheck": true,
     "strict": true,
     "sourceMap": true,
+    "sourceRoot": "/",
     "resolveJsonModule": true,
     "inlineSources": true,
     "isolatedModules": false,
