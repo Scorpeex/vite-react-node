@@ -1,7 +1,7 @@
 import type { TrpcRouterOutput } from '@scorpeex/backend/src/router'
 import { createContext, useContext } from 'react'
 import { trpc } from './trpc'
-
+// access point
 export type AppContext = {
   me: TrpcRouterOutput['getMe']['me']
 }
