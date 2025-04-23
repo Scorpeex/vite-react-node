@@ -1,13 +1,13 @@
-import { zCreateIdeaTrpcInput } from '@scorpeex/backend/src/router/createIdea/input'
-import { Alert } from '../../components/Alert'
-import { Button } from '../../components/Button'
-import { FormItems } from '../../components/FormItems'
-import { Input } from '../../components/Input'
-import { Segment } from '../../components/Segment'
-import { Textarea } from '../../components/Textarea'
-import { useForm } from '../../lib/form'
-import { withPageWrapper } from '../../lib/pageWrapper'
-import { trpc } from '../../lib/trpc'
+import { zCreateIdeaTrpcInput } from '@scorpeex/backend/src/router/ideas/createIdea/input'
+import { Alert } from '../../../components/Alert'
+import { Button } from '../../../components/Button'
+import { FormItems } from '../../../components/FormItems'
+import { Input } from '../../../components/Input'
+import { Segment } from '../../../components/Segment'
+import { Textarea } from '../../../components/Textarea'
+import { useForm } from '../../../lib/form'
+import { withPageWrapper } from '../../../lib/pageWrapper'
+import { trpc } from '../../../lib/trpc'
 
 export const NewIdeaPage = withPageWrapper({
   authorizedOnly: true,

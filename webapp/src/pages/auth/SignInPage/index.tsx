@@ -1,13 +1,13 @@
-import { zSignInTrpcInput } from '@scorpeex/backend/src/router/signIn/input'
+import { zSignInTrpcInput } from '@scorpeex/backend/src/router/auth/signIn/input'
 import Cookies from 'js-cookie'
-import { Alert } from '../../components/Alert'
-import { Button } from '../../components/Button'
-import { FormItems } from '../../components/FormItems'
-import { Input } from '../../components/Input'
-import { Segment } from '../../components/Segment'
-import { useForm } from '../../lib/form'
-import { withPageWrapper } from '../../lib/pageWrapper'
-import { trpc } from '../../lib/trpc'
+import { Alert } from '../../../components/Alert'
+import { Button } from '../../../components/Button'
+import { FormItems } from '../../../components/FormItems'
+import { Input } from '../../../components/Input'
+import { Segment } from '../../../components/Segment'
+import { useForm } from '../../../lib/form'
+import { withPageWrapper } from '../../../lib/pageWrapper'
+import { trpc } from '../../../lib/trpc'
 
 export const SignInPage = withPageWrapper({
   redirectAuthorized: true,

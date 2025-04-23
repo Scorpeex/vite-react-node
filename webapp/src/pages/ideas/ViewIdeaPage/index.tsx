@@ -1,10 +1,10 @@
 import format from 'date-fns/format'
 import { useParams } from 'react-router-dom'
-import { LinkButton } from '../../components/Button'
-import { Segment } from '../../components/Segment'
-import { withPageWrapper } from '../../lib/pageWrapper'
-import { getEditIdeaRoute, type ViewIdeaRouteParams } from '../../lib/routes'
-import { trpc } from '../../lib/trpc'
+import { LinkButton } from '../../../components/Button'
+import { Segment } from '../../../components/Segment'
+import { withPageWrapper } from '../../../lib/pageWrapper'
+import { getEditIdeaRoute, type ViewIdeaRouteParams } from '../../../lib/routes'
+import { trpc } from '../../../lib/trpc'
 import css from './index.module.scss'
 
 export const ViewIdeaPage = withPageWrapper({
@@ -14,11 +14,8 @@ export const ViewIdeaPage = withPageWrapper({
       ideaNick,
     })
   },
-  checkExists: ({ queryResult }) => !!queryResult.data.idea,
-  checkExistsMessage: 'Idea not found',
-  setProps: ({ queryResult, ctx }) => ({
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    idea: queryResult.data.idea!,
+  setProps: ({ queryResult, checkExists, ctx }) => ({
+    idea: checkExists(queryResult.data.idea, 'Idea not found'),
     me: ctx.me,
   }),
 })(({ idea, me }) => (
