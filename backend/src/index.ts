@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { env } from './lib/env'
 import cors from 'cors'
 import express from 'express'
