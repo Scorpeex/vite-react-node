@@ -1,10 +1,10 @@
 import type { TrpcRouter } from '@scorpeex/backend/src/router'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { httpBatchLink } from '@trpc/client'
-import {env} from './env'
 import { createTRPCReact } from '@trpc/react-query'
 import Cookies from 'js-cookie'
 import superjson from 'superjson'
+import { env } from './env'
 
 export const trpc = createTRPCReact<TrpcRouter>()
 
