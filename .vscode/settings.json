@@ -1,4 +1,15 @@
 {
   "eslint.workingDirectories": ["backend", "webapp"],
-  "stylelint.validate": ["css", "scss"]
+  "stylelint.validate": ["css", "scss"],
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "main",
+      "database": "scorpeex",
+      "username": "scorpeex"
+    }
+  ]
 }
